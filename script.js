@@ -1,3 +1,6 @@
 function getInputValue(node) {
-  node.nodeValue === "" ? null : node.nodeValue;
+  if (node.tagName === "INPUT") {
+    return node.value === "" ? null : node.value;
+  }
+  return null;
 }
